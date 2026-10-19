@@ -130,6 +130,18 @@
             <div class="caption">Source <span class="arrow">→</span> <!-- TODO: 目标 prompt --> Edited by UELVE</div>
             <img src="./assets/compare_panda.gif" width="100%">
           </div>
+          <div class="item item-bike">
+            <div class="caption">Source <span class="arrow">→</span> <!-- TODO: 目标 prompt --> Edited by UELVE</div>
+            <img src="./assets/compare_bike.gif" width="100%">
+          </div>
+          <div class="item item-panda2">
+            <div class="caption">Source <span class="arrow">→</span> <!-- TODO: 目标 prompt --> Edited by UELVE</div>
+            <img src="./assets/compare_panda2.gif" width="100%">
+          </div>
+          <div class="item item-anime">
+            <div class="caption">Source <span class="arrow">→</span> <!-- TODO: 目标 prompt --> Edited by UELVE</div>
+            <img src="./assets/compare_anime.gif" width="100%">
+          </div>
         </div>
         <p class="has-text-centered is-size-6" style="color:#777; margin-top:4px;">
           Left: source video &nbsp;·&nbsp; Right: editing result by UELVE
@@ -252,26 +264,30 @@
   </section>
 
 
-  <!-- 演示视频:二选一取消注释(YouTube 或 Bilibili),宽高比 16:9 样式已内置 -->
+  <!-- 演示视频:GIF 上下拼接(上:源视频,下:梵高风格编辑结果);有正式视频后可换回下方注释的 YouTube/Bilibili -->
   <section class="section" id="video">
     <div class="container is-max-desktop">
       <h2 class="title is-3 has-text-centered">Demo Video</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-two-thirds">
-          <div class="publication-video">
-            <!-- YouTube:
-            <iframe src="https://www.youtube.com/embed/VIDEO_ID"
-              title="Demo video" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
-              allowfullscreen></iframe>
-            -->
-            <!-- Bilibili(把 bvid 换成你的 BV号) :
-            <iframe src="//player.bilibili.com/player.html?bvid=BV1xx411c7mD&page=1&autoplay=0"
-              title="Demo video" frameborder="0"
-              allow="fullscreen; encrypted-media" allowfullscreen></iframe>
-            -->
-            <p class="subtitle" style="padding:2rem 0;">【演示视频占位:有视频后取消上面 YouTube 或 Bilibili 的注释】</p>
+          <div class="publication-video" style="height:auto; padding-bottom:0;">
+            <img src="./assets/demo_vangogh.gif" alt="Long-video editing demo: source (top) vs. Van Gogh style edited by UELVE (bottom)"
+              style="width:100%; border-radius:10px; box-shadow:0 2px 8px 0 rgba(0,0,0,0.2), 0 6px 10px 0 rgba(0,0,0,0.19);">
           </div>
+          <p class="is-size-6" style="color:#777; margin-top:6px;">
+            Top: source video &nbsp;·&nbsp; Bottom: Van Gogh style transfer by UELVE
+          </p>
+          <!-- YouTube:
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID"
+            title="Demo video" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
+            allowfullscreen></iframe>
+          -->
+          <!-- Bilibili(把 bvid 换成你的 BV号) :
+          <iframe src="//player.bilibili.com/player.html?bvid=BV1xx411c7mD&page=1&autoplay=0"
+            title="Demo video" frameborder="0"
+            allow="fullscreen; encrypted-media" allowfullscreen></iframe>
+          -->
         </div>
       </div>
     </div>
