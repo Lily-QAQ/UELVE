@@ -1,5 +1,5 @@
 body {
-  font-family: 'Noto Serif', 'Noto Sans', sans-serif;
+  font-family: 'Noto Serif', Georgia, 'Times New Roman', serif;
 }
 
 
@@ -24,7 +24,7 @@ body {
 }
 
 .teaser {
-  font-family: 'Noto Serif', 'Google Sans', sans-serif;
+  font-family: 'Noto Serif', Georgia, 'Times New Roman', serif;
 }
 
 
@@ -48,11 +48,11 @@ body {
 }
 
 .publication-title {
-    font-family: 'Noto Serif', 'Google Sans', sans-serif;
+    font-family: 'Noto Serif', Georgia, 'Times New Roman', serif;
 }
 
 .publication-authors {
-    font-family: 'Noto Serif', 'Google Sans', sans-serif;
+    font-family: 'Noto Serif', Georgia, 'Times New Roman', serif;
 }
 
 .publication-venue {
@@ -116,7 +116,7 @@ body {
 
 .results-carousel .caption {
   font-size: 17px;
-  font-family: 'Noto Serif', 'Google Sans', sans-serif;
+  font-family: 'Noto Serif', Georgia, 'Times New Roman', serif;
   color: #444;
   padding: 10px 12px 8px 12px;
   background: #fff;
