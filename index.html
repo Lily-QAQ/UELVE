@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <meta charset="utf-8">
 
   <title>UELVE: LLM-Driven Unified Framework with Grid Diffusion for Efficient Long Video Editing</title>
   
@@ -43,20 +44,34 @@
             
             <div class="is-size-5 publication-authors">
               <span class="author-block">
-                Li He<sup>1</sup>,
+                Deyin Liu<sup>a</sup>,
               </span>
               <span class="author-block">
-                Zhan Li<sup>2</sup>,
+                Li He<sup>a</sup>,
               </span>
               <span class="author-block">
-                Chengwu Liang<sup>3</sup>
+                Zhan Li<sup>b</sup>,
+              </span>
+              <span class="author-block">
+                Chengwu Liang<sup>c</sup>,
+              </span>
+              <span class="author-block">
+                Xiaoming Li<sup>d</sup>
               </span>
             </div>
 
-            <div class="is-size-5 publication-authors">
-              <span class="author-block"><sup>1</sup>Anhui University,</span>
-              <span class="author-block"><sup>2</sup>Southwest Jiaotong University,</span>
-              <span class="author-block"><sup>3</sup>Henan University of Urban Construction</span>
+            <div class="is-size-6 publication-authors" style="margin-top: 0.75rem; line-height: 1.5;">
+              <div class="author-block" style="display: block; margin: 0.25em 0;"><sup>a</sup>Engineering
+                Research Center of Autonomous Unmanned System Technology, Ministry of Education; Anhui
+                Provincial Key Laboratory of Security Artificial Intelligence; and School of Artificial
+                Intelligence, Anhui University, No 111, Jiulong Road, Hefei, 230601, China</div>
+              <div class="author-block" style="display: block; margin: 0.25em 0;"><sup>b</sup>The
+                Institute of Smart City and Intelligent Transportation, Southwest Jiaotong University,
+                Chengdu, 611756, China</div>
+              <div class="author-block" style="display: block; margin: 0.25em 0;"><sup>c</sup>Henan
+                University of Urban Construction, Longxiang Road, Pingdingshan, 467036, China</div>
+              <div class="author-block" style="display: block; margin: 0.25em 0;"><sup>d</sup>School
+                of International Business, Zhejiang Yuexiu University, Shaoxing, 312000, China</div>
             </div>
 
             <div class="column has-text-centered">
@@ -97,17 +112,17 @@
 
         
         <div id="longvideo-carousel" class="carousel results-carousel">
-          <div class="item item-vangogh">
-            <img src="./assets/prompts/strip_vangogh.png" width="100%" style="padding-top: 2%;">
-            <img src="./assets/demo_vangogh_lr.gif"
-              alt="Long-video editing demo: source (left) vs. Van Gogh style edited by UELVE (right)" width="100%"
-              style="aspect-ratio: 624/241;">
-          </div>
           <div class="item item-watercolor">
             <img src="./assets/prompts/strip_watercolor.png" width="100%" style="padding-top: 2%;">
             <video src="./assets/demo_watercolor_lr.mp4"
               aria-label="Long-video editing demo: source (left) vs. watercolor style edited by UELVE (right)"
               width="100%" style="aspect-ratio: 624/241; object-fit: fill;" autoplay loop muted playsinline></video>
+          </div>
+          <div class="item item-vangogh">
+            <img src="./assets/prompts/strip_vangogh.png" width="100%" style="padding-top: 2%;">
+            <img src="./assets/demo_vangogh_lr.gif"
+              alt="Long-video editing demo: source (left) vs. Van Gogh style edited by UELVE (right)" width="100%"
+              style="aspect-ratio: 624/241;">
           </div>
         </div>
 
@@ -198,13 +213,13 @@
   <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body has-text-justified">
-        <img class="center-img" src="./assets/method.png" width="95%" />
+        <img class="center-img" src="./assets/method.png" width="95%" style="margin-bottom: 3.15rem;" />
         <h2 class="subtitle">
-          Framework of UELVE. We first arrange the frames of input video V<sub>K</sub> into grids, encode them
+          Figure 2: Framework of UELVE. We first arrange the frames of input video V<sub>K</sub> into grids, encode them
           into the latent space and then invert the original latents to Z<sub>T</sub>. Then we denoise the grid
-          latents Z<sub>T</sub> to Ẑ<sub>0</sub> via T time steps of iterations on a pre-trained Text-to-Image
-          diffusion model, decode Ẑ<sub>0</sub> and rearrange the resulted grid frames into an edited video
-          V̂<sub>K</sub> as output. For the denoising process, by comparing the source and target prompts, we
+          latents Z<sub>T</sub> to Z<sup>*</sup><sub>0</sub> via T time steps of iterations on a pre-trained Text-to-Image
+          diffusion model, decode Z<sup>*</sup><sub>0</sub> and rearrange the resulted grid frames into an edited video
+          V<sup>*</sup><sub>K</sub> as output. For the denoising process, by comparing the source and target prompts, we
           leverage an LLM to reason out specific editing goals and types and thus make decisions on
           corresponding model adaptions, unifying diverse editing tasks into a same framework. Beyond the grid
           self-attention for within-grid interactions, we perform a grid sliding manipulation to enhance
@@ -224,7 +239,7 @@
       <div class="content has-text-centered">
         <img class="center-img" src="./assets/teaser.png" width="95%" />
         <p class="subtitle has-text-justified">
-          UELVE is an efficient long-video editing method that leverages LLM to make decisions on model
+          Figure 1: UELVE is an efficient long-video editing method that leverages LLM to make decisions on model
           adaptions according to specific editing types, implements grid diffusion on a pre-trained
           Text-to-Image model to maintain short-term and long-term consistencies, and enhances the efficiency
           by multi-GPU data parallel computation. It is applicable to diverse editing tasks, including
@@ -243,7 +258,7 @@
       <div class="content has-text-centered">
         <img class="center-img" src="./assets/results.png" width="85%" />
         <p class="subtitle has-text-justified">
-          Qualitative comparison with baseline methods. Compared with one-shot methods
+          Figure 6: Qualitative comparison with baseline methods. Compared with one-shot methods
           (Video-p2p, FateZero) and zero-shot methods (RAVE, ControlVideo), UELVE (Attention and
           ControlNet variants) achieves better editing fidelity and temporal consistency.
           Quantitative comparisons and ablation studies are provided in the paper.
@@ -260,7 +275,7 @@
       <h2 class="title">Citation</h2>
       
       <pre><code>@article{liu2026uelve,
-  author    = {Liu, Deyin and He, Li and Li, Zhan and Liang, Chengwu},
+  author    = {Liu, Deyin and He, Li and Li, Zhan and Liang, Chengwu and Li, Xiaoming},
   title     = {LLM-Driven Unified Framework with Grid Diffusion for Efficient Long Video Editing},
   journal   = {arXiv preprint arXiv:XXXX.XXXXX},
   year      = {2026},
