@@ -23,14 +23,14 @@ the computation efficiency.</i></p>
 
 - **[📄 arXiv](https://arxiv.org/abs/XXXX.XXXXX)** — Coming Soon
 - **[🌐 Project Page](https://lily-qaq.github.io/UELVE/)**
-- **🤗 Demo** — Coming Soon
-- **🗂️ DataSets** — Coming Soon
+- **🗂️ DataSets** — [Coming Soon](https://huggingface.co/datasets/Lily-QAQ/UELVE/tree/main)
 
 ## 📰 News
 
+- **[2026/7/31]** DataSets update.
 - **[2026/10/18]** Project page released.
 - **[2026/9/13]** Major revision.
-- **[2026/7/31]** Paper submitted.
+
 
 ## 🚀 Quick Start
 
