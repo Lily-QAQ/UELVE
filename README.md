@@ -27,7 +27,7 @@ the computation efficiency.</i></p>
 
 ## 📰 News
 
-- **[2026/7/31]** DataSets update.
+- **[2026/11/22]** DataSets update.
 - **[2026/10/18]** Project page released.
 - **[2026/9/13]** Major revision.
 
